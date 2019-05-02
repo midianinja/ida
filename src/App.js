@@ -1,17 +1,17 @@
-import React, { Component } from 'react'
-import Typography from '@material-ui/core/Typography'
-import './App.css';
-export default class App extends Component {
-  state = {
-  }
+import React from 'react';
+import Profile from './components/Profile/Page'
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-  render() {
-    return (
+const App = () => {
+  return (
+    <>
+      <CssBaseline />
       <div className="App">
-        <Typography variant='display1' align='center' className='typo' gutterBottom>
-          Exercises
-        </Typography>
+        <Profile>
+        </Profile>
       </div>
-    )
-  }
+    </>
+  );
 }
+
+export default App;
