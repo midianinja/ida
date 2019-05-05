@@ -26,12 +26,12 @@ const styles = theme => ({
     marginBottom: 12,
   },
   chip: {
-    margin: theme.spacing.unit*0.7,
+    margin: theme.spacing.unit*0.6,
   }, 
   bigAvatar: {
-    margin: 10,
-    width: 60,
-    height: 60,
+    marginBottom: 40,
+    width: 150,
+    height: 150,
   },
 });
 
@@ -49,7 +49,9 @@ const PublicCard = (props) => {
       </CardActions>
       
       <CardContent>
-        <Avatar src="http://lorempixel.com/500/500/people/" className={classes.bigAvatar} justify="center" />
+        <Grid container justify = "center">
+          <Avatar src="http://lorempixel.com/500/500/people/" className={classes.bigAvatar} />
+        </Grid>
 
         <Typography className={classes.title} color="textSecondary" gutterBottom>
           Ninja Hackerspace
@@ -57,11 +59,21 @@ const PublicCard = (props) => {
         <Typography variant="h5" component="h5">
           @Ninja Hackerspace
         </Typography>
+
         <Typography className={classes.pos} color="textSecondary">
-          adjective
+          Rio de Janeiro, RJ
         </Typography>
-        <Typography component="p">
-          well meaning and kindly.
+
+        <Typography className={classes.pos} color="textSecondary">
+          CEO, Ninja Hackerspace
+        </Typography>
+
+        <Typography className={classes.pos} color="textSecondary">
+          ninjahackerspace.ida.org
+        </Typography>
+
+        <Typography className={classes.pos} color="textSecondary">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lobortis ipsum aliquam euismod ornare. Nunc vulputate auctor quam, a pharetra metus placerat id.
         </Typography>
 
         <Chip label="MIDIA NINJA" className={classes.chip} />

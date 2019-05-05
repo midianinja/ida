@@ -10,7 +10,7 @@ const Page = () => {
       <HeadBar></HeadBar>
       <Grid container spacing={32} justify="center">
         <Grid item xs={3}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5">
             Perfil Público
           </Typography>
           
@@ -18,7 +18,7 @@ const Page = () => {
         </Grid>
 
         <Grid item xs={3}>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5">
             Informações Confidenciais
           </Typography>
 

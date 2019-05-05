@@ -1,6 +1,7 @@
 import React from 'react';
 import Profile from './components/Profile/Page'
 import CssBaseline from '@material-ui/core/CssBaseline';
+import './App.css'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
@@ -15,7 +16,10 @@ const theme = createMuiTheme({
       main: '#181818',
     },
     type: "dark"
-  }
+  },
+  typography: {
+    useNextVariants: true,
+  },
 });
 
 const App = () => {

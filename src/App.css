@@ -1,7 +1,11 @@
 .App {
-  text-align: center;
-  background: linear-gradient(90deg, #121212 60%, #262626 40%);
+  background-color: #0a0a0a;
   height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .typo {

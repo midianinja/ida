@@ -54,7 +54,7 @@ const PublicForm = (props) => {
 
       <TextField
         required
-        id="standard-required"
+        id="standard-job"
         label="Profissão"
         defaultValue="CEO"
         className={classes.textField}
@@ -63,7 +63,7 @@ const PublicForm = (props) => {
 
       <TextField
         required
-        id="standard-required"
+        id="standard-nationality"
         label="Nacionalidade"
         defaultValue="Brasileira"
         className={classes.textField}
@@ -72,7 +72,7 @@ const PublicForm = (props) => {
 
       <TextField
         required
-        id="standard-required"
+        id="standard-address"
         label="Endereço"
         defaultValue="Carlos Brant, 8 - Largo dos Guimarães"
         className={classes.textField}
