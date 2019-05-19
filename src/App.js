@@ -1,17 +1,50 @@
-import React, { Component } from 'react'
-import Typography from '@material-ui/core/Typography'
-import './App.css';
-export default class App extends Component {
-  state = {
-  }
+import React from 'react'
 
-  render() {
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+
+import './App.scss'
+
+import Header from './organisms/Header/Header'
+import Router from './router';
+
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      // light: will be calculated from palette.primary.main,
+      main: '#0a0a0a',
+      // dark: will be calculated from palette.primary.main,
+      // contrastText: will be calculated to contrast with palette.primary.main
+    },
+    secondary: {
+      main: '#181818',
+    },
+    type: "dark"
+  },
+  typography: {
+    useNextVariants: true,
+  },
+});
+
+class App extends React.Component {
+  
+  render() { 
     return (
-      <div className="App">
-        <Typography variant='display1' align='center' className='typo' gutterBottom>
-          Exercises
-        </Typography>
-      </div>
-    )
+      <>
+        <MuiThemeProvider theme={theme}>
+          <CssBaseline />
+          <div className="App">
+            <Header />
+            <div className="container">
+              <Router />
+              {this.props.children}
+            </div>
+          </div>
+        </MuiThemeProvider>
+      </>
+    );
   }
 }
+
+export default App
