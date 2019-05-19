@@ -35,7 +35,9 @@ class App extends React.Component {
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <div className="App">
-            <Header />
+            { window.location.pathname !== '/login' &&
+              <Header />
+            }
             <div className="container">
               <Router />
               {this.props.children}
