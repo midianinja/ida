@@ -3,21 +3,29 @@ import { Grid } from '@material-ui/core'
 import PublicCard from '../../molecules/PublicCard/PublicCard'
 
 class User extends React.Component { 
-    constructor(props) {
-        super(props)
-        this.state = { 
-            name: "Ninja Hackerspace", 
-            username: "@NinjaHackerspace", 
-            occupation: "CEO", 
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec convallis dui.", 
-            tags: "Midia Ninja, Ninja Hackerspace, Xepa, Emergências"
-        }
+    state = { 
+      users: []
+    }
+
+    getUserData() { 
+        fetch('https://randomuser.me/api/?nat=br')
+        .then(res => res.json())
+        .then((data) => {
+          this.setState({ users: data.results })
+        })
+        .catch((error) => { 
+            console.error(error)
+        })
+    }
+
+    componentDidMount() { 
+        this.getUserData()
     }
 
     render() { 
         return(
             <Grid item xs={12} sm={6} className="user">
-                <PublicCard />
+                <PublicCard users={this.state.users}/>
             </Grid>
         ) 
     }
