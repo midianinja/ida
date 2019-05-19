@@ -13,6 +13,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 
+
 const styles = theme => ({
 
   main: {
@@ -46,47 +47,108 @@ const styles = theme => ({
   },
 });
 
-function SignIn(props) {
-  const { classes } = props;
+class SignIn extends React.Component {
+  
+  state = { 
+    email: '', 
+    password: '', 
+    source: ''
+  }
 
-  document.title = 'IDa | Login';
+  login() { 
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email: this.state.email, senha: this.state.password})
+    };
+    
+    fetch("http://8efc842b.ngrok.io/auth/login", options)
+      .then(response => response.json())
+      .then(data => { 
+        sessionStorage.setItem('token', data.token); 
+        sessionStorage.setItem('userId', data.userId);
+        let token = data.token; 
+        let userId = data.userId;
+        this.postSomMessage(token, userId);
+        console.log(data);
+      })
+      .catch(error => console.error(error));
+  }
 
-  return (
-    <main className={classes.main}>
-      <CssBaseline />
-      <Paper className={classes.paper}>
-        <Avatar className={classes.avatar}>
-          <LockOutlinedIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Acesse sua conta
-        </Typography>
-        <form className={classes.form}>
-          <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="email">Email</InputLabel>
-            <Input id="email" name="email" autoComplete="email" autoFocus />
-          </FormControl>
-          <FormControl margin="normal" required fullWidth>
-            <InputLabel htmlFor="password">Senha</InputLabel>
-            <Input name="password" type="password" id="password" autoComplete="current-password" />
-          </FormControl>
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            color="primary"
-            className={classes.submit}
-          >
-            Acessar o IDa
-          </Button>
-        </form>
-      </Paper>
-    </main>
-  );
+  sendSomInfos() { 
+    window.addEventListener("message", (data) => { 
+      this.setState({ source: data.source }); 
+    }, false)
+  }
+
+  validateForm() {
+    return this.state.email.length > 0 && this.state.password.length > 0;
+  }
+
+  handleChange = event => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    this.login();
+  }
+
+  postSomMessage(token, userId) { 
+    const data = { token: sessionStorage.getItem('token'), ida: sessionStorage.getItem('userId') }
+    this.state.source.postMessage(JSON.stringify(data), '*') 
+    window.close()
+  }
+
+  componentDidMount() { 
+    document.title = 'IDa | Login';
+    this.sendSomInfos();
+  }
+
+  render() { 
+    const { classes } = this.props
+    return (
+      <main className={classes.main}>
+        <CssBaseline />
+        <Paper className={classes.paper}>
+          <Avatar className={classes.avatar}>
+            <LockOutlinedIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Acesse o IDa
+          </Typography>
+          <form className={classes.form} onSubmit={this.handleSubmit}>
+            <FormControl margin="normal" required fullWidth>
+              <InputLabel htmlFor="email">Email</InputLabel>
+              <Input id="email" name="email" autoComplete="email" autoFocus value={this.state.email}
+              onChange={this.handleChange}/>
+            </FormControl>
+            <FormControl margin="normal" required fullWidth>
+              <InputLabel htmlFor="password">Senha</InputLabel>
+              <Input name="password" type="password" id="password" autoComplete="current-password" value={this.state.password}
+              onChange={this.handleChange}/>
+            </FormControl>
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Lembrar minha senha"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              disabled={!this.validateForm()}
+            >
+              Entrar
+            </Button>
+          </form>
+        </Paper>
+      </main>
+    );
+  }
 }
 
 SignIn.propTypes = {
