@@ -39,14 +39,15 @@ const PublicCard = ({users}) => {
               <Card key={key}>      
                 <CardContent>
                   <Grid container justify="center">
-                    <Avatar src="http://lorempixel.com/500/500/people/"  />
+                    <Avatar src={ user.picture.medium }  />
                   </Grid>
       
                   <Typography color="textSecondary" gutterBottom>
-                    {user.name.first}
+                    {`@`}{ user.login.username }
                   </Typography>
+
                   <Typography variant="h5" component="h5">
-                    { user.login.username }
+                    { user.name.first }
                   </Typography>
       
                   <Typography color="textSecondary">
@@ -58,7 +59,7 @@ const PublicCard = ({users}) => {
                   </Typography>
       
                   <Typography color="textSecondary">
-                    {user.email}
+                    { user.email }
                   </Typography>
       
                   <Typography color="textSecondary">
