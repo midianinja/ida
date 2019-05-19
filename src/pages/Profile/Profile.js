@@ -25,7 +25,7 @@ class Profile extends React.Component {
     render() { 
         return( 
             <ProfileContainer>
-                <Grid container spacing={16}>
+                <Grid container spacing={32}>
                     <User />
                     <Confidential />
                 </Grid>
