@@ -1,68 +1,82 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# IDa - Identididade Digital Ativista
 
-## Available Scripts
+Esse projeto foi concebido com [Create React App](https://github.com/facebook/create-react-app).
 
-In the project directory, you can run:
+_“Lançando o maior movimento Ninja do universo!”._
 
-### `npm start`
+**Nós somos Ninjas e acreditamos que podemos transformar o nosso país por meio da lógica de organização social coletiva.Junte-se a nós!**
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Conteúdo
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+1. [Sobre o IDa](#sobre-o-ida)
+2. [Objetivos](#objetivos)
+3. [Comunicação](#comunicação)
+4. [Como contribuir](#como-contribuir)
+5. [Instalação](#instalação)
+6. [FAQ](#perguntas-frequentes-(FAQ))
 
-### `npm test`
+## Sobre o IDa
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Uma conta, infinitas tecnologias em código aberto.
 
-### `npm run build`
+O IDa é um identificação digital ativista que conecta agentes da cultura, comunicação e direitos humanos aos serviços da Mídia NINJA a partir da interação de informações, diretas e indiretamente, realizadas entre usuários e a plataforma.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A partir de uma Governança e Serviços Digitais em Rede esta autenticação ativista preza pela segurança, transparência e privacidade, e coloca o usuário como ponto de convergência para a integração descentralizada dos dados e aplicações.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+É possível se cadastrar, criar seu perfil e acessar o Banco de Tecnologias com uma série de conteúdos que apresentam um universo de ideias e práticas que podem ser realizadas e colaboram com a transformação de nossos territórios.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Objetivos
 
-### `npm run eject`
+#### Geral
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Criar uma identificação digital ativista desburocratizada e que promova a integração de sistemas e micro serviços.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### Específicos
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Unificar os cadastros já realizados em um único ambiente;
+- Estabelecer uma dinâmica intuitiva de relacionamentos entre os ativistas;
+- Integrar e amplia os Serviços Digitais e Plataformas de Governança;
+- Desburocratizar o acesso: uma só conta para todos os sistemas, projetos e serviços;
+- Potencializa a colaboração em rede;
+- Desenvolvimento em Software Livre,
+- Criar uma solução tecnológica que colabore com mais descentralização, mais transparência, mais participação e  mais felicidade.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Comunicação
 
-## Learn More
+Acreditamos que o sucesso do projeto depende diretamente da interação clara e objetiva entre os membros. Por isso, estamos definindo algumas políticas para que estas interações nos ajudem a crescer juntos! Você pode consultar algumas destas boas práticas em nosso [código de conduta](https://github.com/midianinja/AppNinja/blob/master/CODE_OF_CONDUCT.md).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Além disso, gostamos de meios de comunicação assíncrona, onde não há necessidade de respostas em tempo real. Isso facilita a produtividade individual dos colaboradores do projeto.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Canal de comunicação | Objetivos |
+|----------------------|-----------|
+| [Issues do Github](https://github.com/midianinja/AppNinja/issues) | - Sugestão de novas funcionalidades<br> - Reportar bugs<br> - Discussões técnicas |
 
-### Code Splitting
+## Como contribuir
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Contribuições são **super bem vindas**! Se você tem vontade de construir o IDa junto conosco, veja o nosso [guia de contribuição](./CONTRIBUTING.md) onde explicamos detalhadamente como trabalhamos e de que formas você pode nos ajudar a alcançar nossos objetivos.
 
-### Analyzing the Bundle Size
+### Requisitos
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- Node.js
+- NPM
 
-### Making a Progressive Web App
+### Executando o projeto
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+```javascript
+/* Instala as dependências do projeto */
+npm install
 
-### Advanced Configuration
+/* Inicialize o npm e o react */
+npm start
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+/* Para executar a suíte de testes */
+npm run test
+```
 
-### Deployment
+<!-- ## Perguntas frequentes (FAQ)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+Algumas perguntas aparecem recorrentemente. Olhe primeiro por aqui: [FAQ](docs/faq.md) -->
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Powered by [Frente Hacker]
