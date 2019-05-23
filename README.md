@@ -2,9 +2,7 @@
 
 Esse projeto foi concebido com [Create React App](https://github.com/facebook/create-react-app).
 
-_“Lançando o maior movimento Ninja do universo!”._
-
-**Nós somos Ninjas e acreditamos que podemos transformar o nosso país por meio da lógica de organização social coletiva.Junte-se a nós!**
+Mais conexão, mais participação e mais felicidade. A IDa é um serviço de autenticação digital que conecta agentes da cultura, comunicação e direitos humanos a infinitas tecnologias em código aberto.
 
 ## Conteúdo
 
@@ -19,7 +17,7 @@ _“Lançando o maior movimento Ninja do universo!”._
 
 Uma conta, infinitas tecnologias em código aberto.
 
-O IDa é um identificação digital ativista que conecta agentes da cultura, comunicação e direitos humanos aos serviços da Mídia NINJA a partir da interação de informações, diretas e indiretamente, realizadas entre usuários e a plataforma.
+O IDa é um identificação digital ativista que conecta agentes da cultura, comunicação e direitos humanos a um Banco de Tecnologias para o comum a partir da interação de informações, diretas e indiretamente, realizadas entre usuários e a plataforma.
 
 A partir de uma Governança e Serviços Digitais em Rede esta autenticação ativista preza pela segurança, transparência e privacidade, e coloca o usuário como ponto de convergência para a integração descentralizada dos dados e aplicações.
 
