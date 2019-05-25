@@ -1,10 +1,12 @@
 import React from 'react'
 import Grid from '@material-ui/core/Grid'
-import User from '../../organisms/User/User';
-import Confidential from '../../organisms/Confidential/Confidential';
-import styled from "styled-components";
+import User from '../../organisms/User/User'
+import styled from "styled-components"
+import Confidential from '../../organisms/Confidential/Confidential'
 
-import rem from '../../atoms/Functions.js'
+import '../../templates/Main.scss'
+import rem from '../../utils/remConverter/remConverter.js'
+
 
 const ProfileContainer = styled.div`
     margin: ${rem(32)} auto;
@@ -12,22 +14,20 @@ const ProfileContainer = styled.div`
 
 class Profile extends React.Component { 
 
-    constructor(props) { 
-        super(props)
-        this.state = { 
-        }
-    }
-
     componentDidMount() { 
         document.title = 'IDa | Perfil'
     }
 
     render() { 
         return( 
-            <ProfileContainer>
-                <Grid container spacing={32}>
-                    <User />
-                    <Confidential />
+            <ProfileContainer className="container">
+                <Grid container spacing={16}>
+                    <Grid item xs={12} sm={6} className="confidential">
+                        <User />
+                    </Grid>
+                    <Grid item xs={12} sm={6} className="confidential">
+                        <Confidential />
+                    </Grid>
                 </Grid>
             </ProfileContainer>
         )

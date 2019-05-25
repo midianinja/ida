@@ -5,8 +5,8 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 import './App.scss'
 
-import Header from './organisms/Header/Header'
-import Router from './router';
+import Header from '../organisms/Header/Header'
+import Router from '../router';
 
 
 const theme = createMuiTheme({
@@ -21,10 +21,7 @@ const theme = createMuiTheme({
       main: '#181818',
     },
     type: "dark"
-  },
-  typography: {
-    useNextVariants: true,
-  },
+  }
 });
 
 class App extends React.Component {
@@ -35,13 +32,13 @@ class App extends React.Component {
         <MuiThemeProvider theme={theme}>
           <CssBaseline />
           <div className="App">
-            { window.location.pathname !== '/login' &&
+            { window.location.pathname !== '/login' && window.location.pathname !== '/cadastro'  &&
               <Header />
             }
-            <div className="container">
+            <React.Fragment>
               <Router />
               {this.props.children}
-            </div>
+            </React.Fragment>
           </div>
         </MuiThemeProvider>
       </>

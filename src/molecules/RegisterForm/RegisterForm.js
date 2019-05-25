@@ -1,119 +1,93 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
+import React from 'react'
+import TextField from '@material-ui/core/TextField'
+import styled from "styled-components"
 
-const styles = theme => ({
-  card: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-  chip: {
-    margin: theme.spacing.unit*0.6,
-  }, 
-  bigAvatar: {
-    marginBottom: 20,
-    marginTop: 20,
-    width: 150,
-    height: 150,
-  },
-});
+import '../../templates/Main.scss'
 
-const RegisterForm = (props) => {
-  const { classes } = props;
+const Container = styled.div`
+`
+const Form = styled.form`
+`
 
-  return (
-    <Card className={classes.card}>
-      <CardContent>
-        <form noValidate autoComplete="off">
-            <Grid container justify="center">
-                <Avatar src="http://lorempixel.com/500/500/people/" className={classes.bigAvatar} />
-            </Grid>
-            <TextField
-                id="standard-email"
-                label="Email"
-                margin="normal"
-                className={classes.textField}
-                defaultValue="ninjahackerspace@gmail.com"
-                InputProps={{
-                readOnly: true,
-                }}
-                fullWidth
-            />
+export class RegisterForm extends React.Component { 
+  render() { 
+    return (
+      <Container className="container">
+        <Form validate autoComplete="off">
+          <TextField
+              id="name"
+              label="Nome completo"
+              defaultValue=""
+              margin="normal"
+              required
+              fullWidth
+          />
 
-            <TextField
-                id="standard-password-input"
-                label="Senha"
-                type="password"
-                className={classes.textField}
-                autoComplete="current-password"
-                margin="normal"
-                fullWidth
-            />
+          <TextField
+              id="email"
+              label="E-mail"
+              defaultValue=""
+              type="email"
+              margin="normal"
+              required
+              fullWidth
+          />
 
-            <TextField
-                required
-                id="standard-job"
-                label="Profissão"
-                defaultValue="CEO"
-                className={classes.textField}
-                margin="normal"
-                fullWidth
-            />
+          <TextField
+              id="datebirth"
+              label="Data de nascimento"
+              type="date"
+              margin="normal"
+              defaultValue="1990-05-24"
+              required
+              fullWidth
 
-            <TextField
-                required
-                id="standard-nationality"
-                label="Nacionalidade"
-                defaultValue="Brasileira"
-                className={classes.textField}
-                margin="normal"
-                fullWidth
-            />
+          />
 
-            <TextField
-                required
-                id="standard-address"
-                label="Endereço"
-                defaultValue="Carlos Brant, 8 - Largo dos Guimarães"
-                className={classes.textField}
-                margin="normal"
-                fullWidth
-            />
+          <TextField
+              id="phone"
+              type="number"
+              margin="normal"
+              label="Telefone (Zap)"
+              defaultValue=""
+              required
+              fullWidth
+          />
 
-            <TextField
-                id="date"
-                label="Data de nascimento"
-                type="date"
-                defaultValue="2017-05-24"
-                className={classes.textField}
-                InputLabelProps={{
-                shrink: true,
-                }}
-                fullWidth
-            />
-        </form>
-      </CardContent>
-    </Card>
-  );
+          <TextField
+              id="city"
+              label="Cidade"
+              defaultValue=""
+              type="text"
+              margin="normal"
+              required
+              fullWidth
+
+          />  
+
+          <TextField
+              id="uf"
+              label="Estado"
+              defaultValue=""
+              type="text"
+              margin="normal"
+              required
+              fullWidth
+          />  
+
+          <TextField
+              id="country"
+              label="País"
+              defaultValue=""
+              type="text"
+              margin="normal"
+              required
+              fullWidth
+          /> 
+        </Form>
+      </Container>
+    );
+  }
 }
 
-RegisterForm.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(RegisterForm);
+export default RegisterForm;

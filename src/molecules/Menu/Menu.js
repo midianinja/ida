@@ -6,7 +6,7 @@ import MenuIcon from "@material-ui/icons/Menu"
 import styled from "styled-components"
 
 import './Menu.scss'
-import rem from '../../atoms/Functions.js'
+import rem from '../../utils/remConverter/remConverter.js'
 
 const Logo = styled.img`
   display: block;
