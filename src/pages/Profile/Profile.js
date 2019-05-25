@@ -4,7 +4,6 @@ import User from '../../organisms/User/User'
 import styled from "styled-components"
 import Confidential from '../../organisms/Confidential/Confidential'
 
-import '../../templates/Main.scss'
 import rem from '../../utils/remConverter/remConverter.js'
 
 

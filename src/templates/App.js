@@ -4,6 +4,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 import './App.scss'
+import './Main.scss'
 
 import Header from '../organisms/Header/Header'
 import Router from '../router';

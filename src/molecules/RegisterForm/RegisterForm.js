@@ -2,8 +2,6 @@ import React from 'react'
 import TextField from '@material-ui/core/TextField'
 import styled from "styled-components"
 
-import '../../templates/Main.scss'
-
 const Container = styled.div`
 `
 const Form = styled.form`
