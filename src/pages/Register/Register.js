@@ -7,18 +7,20 @@ import { withStyles } from '@material-ui/styles'
 
 const styles = {
     item: {
-      background: '#222222'
+      background: '#222222',
+      padding: `${rem(30)} ${rem(20)}`
    },
+   title: { 
+       fontSize: `${rem(20)}`
+   }
+
 }
 
 const Logo = styled.img`
   display: block;
   height: ${rem(35)};
   width: ${rem(35)};
-//   margin: ${rem(0)} 0;
-//   @media (min-width: 992px) { 
-//     margin: ${rem(45)} 0;
-//   }
+  margin-bottom: ${rem(20)};
 `
 
 function Register(props) { 
@@ -31,13 +33,15 @@ function Register(props) {
         <React.Fragment>
             <Grid>
                 <Grid item xs={12} className={classes.item}>
-                    <Logo src="/../assets/img/logo-branco.png" />
-                    <Typography gutterBottom variant="h4" align="left">
-                        Criando seu IDa
-                    </Typography>
-                    <Typography gutterBottom variant="subtitle2" align="left">
-                        Preencha o formulário para finalizar seu cadastro                        
-                    </Typography>
+                    <div className="container">
+                        <Logo src="/../assets/img/logo-branco.png" />
+                        <Typography gutterBottom variant="h4" align="left" className={classes.title}>
+                            Criando seu IDa
+                        </Typography>
+                        <Typography gutterBottom variant="subtitle2" align="left">
+                            Preencha o formulário para finalizar seu cadastro                        
+                        </Typography>
+                    </div>
                 </Grid>
             </Grid>
             <RegisterForm />

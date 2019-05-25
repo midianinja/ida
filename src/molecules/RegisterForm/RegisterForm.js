@@ -9,85 +9,121 @@ const Container = styled.div`
 const Form = styled.form`
 `
 
-export class RegisterForm extends React.Component { 
-  render() { 
-    return (
-      <Container className="container">
-        <Form validate autoComplete="off">
-          <TextField
-              id="name"
-              label="Nome completo"
-              defaultValue=""
-              margin="normal"
-              required
-              fullWidth
-          />
+function RegisterForm() { 
+  const [values, setValues] = React.useState({
+    country: 'Brasil',
+    city: 'Rio de Janeiro',
+    uf: 'RJ'
+  });
 
-          <TextField
-              id="email"
-              label="E-mail"
-              defaultValue=""
-              type="email"
-              margin="normal"
-              required
-              fullWidth
-          />
+  const handleChange = name => event => {
+    setValues({ ...values, [name]: event.target.value });
+  };
 
-          <TextField
-              id="datebirth"
-              label="Data de nascimento"
-              type="date"
-              margin="normal"
-              defaultValue="1990-05-24"
-              required
-              fullWidth
+  return (
+    <Container className="container">
+      <Form validate autoComplete="off">
+        <TextField
+            id="name"
+            label="Nome completo"
+            defaultValue=""
+            margin="normal"
+            required
+            fullWidth
+        />
 
-          />
+        <TextField
+            id="email"
+            label="E-mail"
+            defaultValue=""
+            type="email"
+            margin="normal"
+            required
+            fullWidth
+        />
 
-          <TextField
-              id="phone"
-              type="number"
-              margin="normal"
-              label="Telefone (Zap)"
-              defaultValue=""
-              required
-              fullWidth
-          />
+        <TextField
+            id="datebirth"
+            label="Data de nascimento"
+            type="date"
+            margin="normal"
+            defaultValue="1990-05-24"
+            required
+            fullWidth
 
-          <TextField
-              id="city"
-              label="Cidade"
-              defaultValue=""
-              type="text"
-              margin="normal"
-              required
-              fullWidth
+        />
 
-          />  
+        <TextField
+            id="phone"
+            type="number"
+            margin="normal"
+            label="Telefone (Zap)"
+            defaultValue=""
+            required
+            fullWidth
+        />
 
-          <TextField
-              id="uf"
-              label="Estado"
-              defaultValue=""
-              type="text"
-              margin="normal"
-              required
-              fullWidth
-          />  
+        <TextField
+          id="country"
+          select
+          label="País"
+          value={values.country}
+          onChange={handleChange('country')}
+          SelectProps={{
+            native: true,
+          }}
+          margin="normal"
+          fullWidth
+        >
+        {/* {currencies.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))} */}
+        </TextField>
 
-          <TextField
-              id="country"
-              label="País"
-              defaultValue=""
-              type="text"
-              margin="normal"
-              required
-              fullWidth
-          /> 
-        </Form>
-      </Container>
-    );
-  }
+        <TextField
+          id="uf"
+          select
+          label="Estado"
+          value={values.uf}
+          onChange={handleChange('uf')}
+          SelectProps={{
+            native: true,
+          }}
+          margin="normal"
+          fullWidth
+        >
+        {/* {currencies.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))} */}
+        </TextField>
+
+        <TextField
+          id="city"
+          select
+          label="Cidade"
+          value={values.city}
+          onChange={handleChange('city')}
+          SelectProps={{
+            native: true,
+          }}
+          margin="normal"
+          fullWidth
+        >
+        {/* {currencies.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))} */}
+        </TextField>
+      </Form>
+    </Container>
+  );
+
 }
+
 
 export default RegisterForm;
