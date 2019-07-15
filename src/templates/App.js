@@ -30,12 +30,12 @@ class App extends React.Component {
   render() { 
     return (
       <>
-        <MuiThemeProvider theme={theme}>
+        <MuiThemeProvider> {/* theme={theme} */}
           <CssBaseline />
           <div className="App">
-            { window.location.pathname !== '/login' && window.location.pathname !== '/cadastro'  &&
+            { window.location.pathname !== '/login' && window.location.pathname !== '/cadastro' && window.location.pathname !== '/'  &&
               <Header />
-            }
+            } 
             <React.Fragment>
               <Router />
               {this.props.children}
