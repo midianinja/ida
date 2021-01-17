@@ -1,19 +1,26 @@
-# IDa - Identididade Digital Ativista
+<p align="center">
+<img style="border-radius: 100px;" src="https://static.wixstatic.com/media/a14a2b_0a6ea4b1fc6f4b9682dea5a121c92b64~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01/ninja-appaula-icones-ida.webp" width="200" alt="Identididade Digital Ativista">
+</p>
+<h1 align="center">Identididade Digital Ativista - IDa</h1>
+<p align="center">Uma conta, infinitas tecnologias em código aberto.</p>
 
-Esse projeto foi concebido com [Create React App](https://github.com/facebook/create-react-app).
+## Índice
 
-Mais conexão, mais participação e mais felicidade. A IDa é um serviço de autenticação digital que conecta agentes da cultura, comunicação e direitos humanos a infinitas tecnologias em código aberto.
+1. [Traduções](#traduções)
+1. [O Projeto](#o-projeto)
+1. [Objetivos](#objetivos)
+1. [Público Alvo](#público-alvo)
+1. [Funcionalidades](#funcionalidades)
+1. [Comunicação](#comunicação)
+1. [Como contribuir](#como-contribuir)
+1. [Instalação](#instalação)
+1. [FAQ](#perguntas-frequentes-(FAQ))
 
-## Conteúdo
+## Traduções
 
-1. [Sobre o IDa](#sobre-o-ida)
-2. [Objetivos](#objetivos)
-3. [Comunicação](#comunicação)
-4. [Como contribuir](#como-contribuir)
-5. [Instalação](#instalação)
-6. [FAQ](#perguntas-frequentes-(FAQ))
+[PT/BR](https://github.com/midianinja/ida)
 
-## Sobre o IDa
+## O Projeto
 
 Uma conta, infinitas tecnologias em código aberto.
 
@@ -23,21 +30,29 @@ A partir de uma Governança e Serviços Digitais em Rede esta autenticação ati
 
 É possível se cadastrar, criar seu perfil e acessar o Banco de Tecnologias com uma série de conteúdos que apresentam um universo de ideias e práticas que podem ser realizadas e colaboram com a transformação de nossos territórios.
 
-### Objetivos
+## Objetivos
 
-#### Geral
+* Criar uma identificação digital ativista desburocratizada e que promova a integração de sistemas e micro serviços.
+* Unificar os cadastros já realizados em um único ambiente;
+* Estabelecer uma dinâmica intuitiva de relacionamentos entre os ativistas;
+* Integrar e amplia os Serviços Digitais e Plataformas de Governança;
+* Desburocratizar o acesso: uma só conta para todos os sistemas, projetos e serviços;
+* Potencializa a colaboração em rede;
+* Desenvolvimento em Software Livre,
+* Criar uma solução tecnológica que colabore com mais descentralização, mais transparência, mais participação e  mais felicidade.
 
-Criar uma identificação digital ativista desburocratizada e que promova a integração de sistemas e micro serviços.
+## Público Alvo
 
-#### Específicos
+1. Produtor: de artistas, agentes, bookers, casas de shows, festivais, eventos, entre outros
+2. Artistas: bandas, cantores, DJs, entre outros
+3. Profissionais e Serviços: técnicos, comunicação, logística e estrutura
+4. Fãs / público geral
 
-- Unificar os cadastros já realizados em um único ambiente;
-- Estabelecer uma dinâmica intuitiva de relacionamentos entre os ativistas;
-- Integrar e amplia os Serviços Digitais e Plataformas de Governança;
-- Desburocratizar o acesso: uma só conta para todos os sistemas, projetos e serviços;
-- Potencializa a colaboração em rede;
-- Desenvolvimento em Software Livre,
-- Criar uma solução tecnológica que colabore com mais descentralização, mais transparência, mais participação e  mais felicidade.
+## Funcionalidades / Functionalities
+
+* Login/cadastro 
+* Perfil 
+* Gestão Perfil
 
 ## Comunicação
 
@@ -55,8 +70,8 @@ Contribuições são **super bem vindas**! Se você tem vontade de construir o I
 
 ### Requisitos
 
-- Node.js
-- NPM
+* Node.js
+* NPM
 
 ### Executando o projeto
 
